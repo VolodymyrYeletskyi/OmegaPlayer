@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">OmegaPlayer</string>
+
+    <string name="no_network_message">No network. Try to reconnect</string>
+    <string name="database_error_message">Oops… Something happened, please try again</string>
+
+    <string name="enter_link_hint">Enter M3U Link</string>
+    <string name="download_link_button_text">Download</string>
+
+    <string name="home_screen_title_text">Select Video</string>
+    <string name="change_link_button_text">Change Link</string>
+
+</resources>
