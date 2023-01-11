@@ -34,6 +34,10 @@ class HomeViewModel(
         _homeScreenStateFlow.emit(result)
     }
 
+    fun setVideoCoordinates(categoryId: Int, startVideoId: Int) {
+        m3URepository.setVideoCoordinates(categoryId, startVideoId)
+    }
+
     fun changeLink() = viewModelScope.launch(Dispatchers.IO) {
         m3URepository.clearM3UTables()
     }

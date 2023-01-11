@@ -23,7 +23,7 @@ fun mapM3ULinkContent(data: String): List<CategoryWithVideos> {
 
         val id = parseExt(item, EXT_ID).orEmpty()
         val videoItem = M3UVideoItem(
-            id = id.ifBlank { index.toString() },
+            id = index,
             videoCategoryId = groups.indexOf(group),
             title = parseName(item, id).orEmpty(),
             imageUrl = parseExt(item, EXT_LOGO),

@@ -71,7 +71,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun onVideoClick(video: M3UVideoItem) {
-        Toast.makeText(requireContext(), video.title, Toast.LENGTH_LONG).show()
+        homeViewModel.setVideoCoordinates(video.videoCategoryId, video.id)
+        findNavController()
+            .navigate(HomeFragmentDirections.actionHomeFragmentToVideoPlayerFragment())
     }
 
     private fun handleLoading(isLoading: Boolean) {

@@ -18,6 +18,9 @@ interface M3UDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertVideos(videos: List<M3UVideoItem>)
 
+    @Query("SELECT * FROM video_item WHERE video_category_id LIKE :categoryId")
+    suspend fun getVideosByCategory(categoryId: Int): List<M3UVideoItem>
+
     @Transaction
     @Query("SELECT * FROM video_category")
     suspend fun getCategoriesWithVideos(): List<CategoryWithVideos>

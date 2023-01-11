@@ -15,10 +15,10 @@ class LinkViewModel(
 
     private val _linkScreenStateFlow = MutableStateFlow(
         LinkScreenState(
-        isLoading = false,
-        isSuccess = false,
-        error = null
-    )
+            isLoading = false,
+            isSuccess = false,
+            error = null
+        )
     )
     val linkScreenStateFlow = _linkScreenStateFlow.asStateFlow()
 

@@ -18,7 +18,7 @@ import androidx.room.PrimaryKey
 )
 data class M3UVideoItem(
     @PrimaryKey
-    @ColumnInfo(name = "id") val id: String,
+    @ColumnInfo(name = "id") val id: Int,
     @ColumnInfo(name = "video_category_id") val videoCategoryId: Int,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "image_url") val imageUrl: String?,

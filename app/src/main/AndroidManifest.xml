@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OmegaPlayer"
+        android:usesCleartextTraffic="true"
         tools:targetApi="33">
 
         <activity
@@ -30,6 +31,18 @@
                 android:value="" />
 
         </activity>
+
+        <service
+            android:name=".service.VideoPlayerService"
+            android:foregroundServiceType="mediaPlayback"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+
+        </service>
 
     </application>
 

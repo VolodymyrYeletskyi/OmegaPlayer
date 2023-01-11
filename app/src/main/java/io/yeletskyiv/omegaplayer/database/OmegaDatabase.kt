@@ -12,7 +12,7 @@ import io.yeletskyiv.omegaplayer.model.entity.VideoCategory
         M3UVideoItem::class
     ],
     exportSchema = true,
-    version = 2
+    version = 3
 )
 abstract class OmegaDatabase : RoomDatabase() {
 
